@@ -1,0 +1,38 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (3): 
+	- create-movie-form.html
+	- 
+	- all-movies.html
+
+[GIN-debug] GET    /                         --> github.com/lordofthemind/goGinWebFramework/middleware.getHello (1 handlers)
+[GIN-debug] GET    /greet                    --> github.com/lordofthemind/goGinWebFramework/middleware.getGreet (1 handlers)
+[GIN-debug] GET    /movie                    --> github.com/lordofthemind/goGinWebFramework/middleware.getAllMovies (1 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (3): 
+	- 
+	- all-movies.html
+	- create-movie-form.html
+
+[GIN-debug] GET    /                         --> github.com/lordofthemind/goGinWebFramework/middleware.getHello (1 handlers)
+[GIN-debug] GET    /greet                    --> github.com/lordofthemind/goGinWebFramework/middleware.getGreet (1 handlers)
+[GIN-debug] GET    /movie                    --> github.com/lordofthemind/goGinWebFramework/middleware.getAllMovies (1 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (3): 
+	- create-movie-form.html
+	- 
+	- all-movies.html
+
+[GIN-debug] GET    /                         --> github.com/lordofthemind/goGinWebFramework/middleware.getHello (1 handlers)
+[GIN-debug] GET    /greet                    --> github.com/lordofthemind/goGinWebFramework/middleware.getGreet (1 handlers)
+[GIN-debug] GET    /movie                    --> github.com/lordofthemind/goGinWebFramework/middleware.getAllMovies (1 handlers)
+PASS
+ok  	github.com/lordofthemind/goGinWebFramework/middleware	0.008s

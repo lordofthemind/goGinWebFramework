@@ -1,0 +1,12 @@
+.
+├── go.mod
+├── go.sum
+├── main.go
+├── static
+│   └── style.css
+├── templates
+│   ├── all-movies.html
+│   └── create-movie-form.html
+└── tree.txt
+
+2 directories, 7 files

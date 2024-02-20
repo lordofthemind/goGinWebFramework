@@ -1,0 +1,75 @@
+#!/bin/bash
+
+BASE_URL="http://localhost:9090/movie"
+
+function display_menu {
+    echo "1. Get Movies"
+    echo "2. Get Movie by ID"
+    echo "3. Create Movie"
+    echo "4. Update Movie Price"
+    echo "5. Delete Movie"
+    echo "6. Exit"
+}
+
+function get_movies {
+    curl -s ${BASE_URL}
+}
+
+function get_movie_by_id {
+    echo -n "Enter Movie ID: "
+    read movie_id
+    response=$(curl -s ${BASE_URL}/${movie_id})
+
+    if [[ $response == *"id"* ]]; then
+        echo $response
+    else
+        echo "Movie with ID ${movie_id} not found."
+    fi
+}
+
+function create_movie {
+    echo "Enter Movie Details:"
+    echo -n "Title: "
+    read title
+    echo -n "Director: "
+    read director
+    echo -n "Price: "
+    read price
+
+    # Generate a unique ID (you may use other methods for better uniqueness)
+    new_id=$(date +%s)
+
+    json_data="{\"id\":\"${new_id}\",\"title\":\"${title}\",\"director\":\"${director}\",\"price\":\"${price}\"}"
+    curl -s -X POST -H "Content-Type: application/json" -d "${json_data}" ${BASE_URL}
+}
+
+function update_movie_price {
+    echo -n "Enter Movie ID: "
+    read movie_id
+    json_data="{\"price\":\"9.99\"}"
+    curl -s -X PATCH -H "Content-Type: application/json" -d "${json_data}" ${BASE_URL}/${movie_id}
+}
+
+function delete_movie {
+    echo -n "Enter Movie ID: "
+    read movie_id
+    curl -s -X DELETE ${BASE_URL}/${movie_id}
+}
+
+while true; do
+    display_menu
+    echo -n "Enter your choice (1-6): "
+    read choice
+
+    case $choice in
+        1) get_movies ;;
+        2) get_movie_by_id ;;
+        3) create_movie ;;
+        4) update_movie_price ;;
+        5) delete_movie ;;
+        6) exit ;;
+        *) echo "Invalid choice. Please enter a number between 1 and 6." ;;
+    esac
+
+    echo
+done
