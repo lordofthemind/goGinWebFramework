@@ -1,0 +1,41 @@
+.
+├── APIbasics
+│   ├── go.mod
+│   ├── go.sum
+│   ├── main.go
+│   └── runserver
+├── auth
+│   ├── go.mod
+│   ├── go.sum
+│   ├── goUser.sql
+│   ├── main.go
+│   └── templates
+│       ├── index.html
+│       ├── loggedin.html
+│       ├── login.html
+│       └── profile.html
+├── htmlBasics
+│   ├── go.mod
+│   ├── go.sum
+│   ├── main.go
+│   └── templates
+│       ├── customGreeting.html
+│       ├── form.html
+│       ├── formResult.html
+│       ├── greeting.html
+│       └── manyData.html
+├── middleware
+│   ├── go.mod
+│   ├── go.sum
+│   ├── main.go
+│   ├── main_test.go
+│   ├── static
+│   │   └── style.css
+│   ├── templates
+│   │   ├── all-movies.html
+│   │   └── create-movie-form.html
+│   ├── test.txt
+│   └── tree.txt
+└── tree.txt
+
+8 directories, 30 files
